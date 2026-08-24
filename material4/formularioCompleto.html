@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion a Curso Presencial</title>
+</head>
+
+<body>
+    <h1>Formulario de inscripcion a curso presencial</h1>
+    <p>Completa la siguiente informacion para reservar tu plaza en el curso de Diseno Web Inicial.</p>
+
+    <form action="/inscripciones" method="post" enctype="multipart/form-data" autocomplete="on">
+        <input type="hidden" name="course_id" value="DW-2026-01">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <p>
+                <label for="first-name">Nombre:</label><br>
+                <input type="text" id="first-name" name="first_name" required minlength="2" maxlength="40"
+                    autocomplete="given-name" placeholder="Ej. Laura">
+            </p>
+
+            <p>
+                <label for="last-name">Apellidos:</label><br>
+                <input type="text" id="last-name" name="last_name" required minlength="2" maxlength="60"
+                    autocomplete="family-name" placeholder="Ej. Gomez Ruiz">
+            </p>
+
+            <p>
+                <label for="dni">Documento de identidad:</label><br>
+                <input type="text" id="dni" name="dni" required minlength="8" maxlength="15"
+                    pattern="[A-Za-z0-9-]{8,15}" placeholder="Ej. 12345678A">
+            </p>
+
+            <p>
+                <label for="birth-date">Fecha de nacimiento:</label><br>
+                <input type="date" id="birth-date" name="birth_date" required min="1950-01-01" max="2010-12-31">
+            </p>
+
+            <p>
+                <span>Genero:</span><br>
+                <label><input type="radio" name="gender" value="female" required> Femenino</label>
+                <label><input type="radio" name="gender" value="male"> Masculino</label>
+                <label><input type="radio" name="gender" value="other"> Otro</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contacto</legend>
+
+            <p>
+                <label for="email">Correo electronico:</label><br>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                    placeholder="correo@ejemplo.com">
+            </p>
+
+            <p>
+                <label for="phone">Telefono movil:</label><br>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                    pattern="[0-9+ ]{9,15}" placeholder="Ej. +34 600 123 456">
+            </p>
+
+            <p>
+                <label for="address">Direccion:</label><br>
+                <input type="text" id="address" name="address" required maxlength="120"
+                    autocomplete="street-address" placeholder="Calle, numero, piso">
+            </p>
+
+            <p>
+                <label for="city">Ciudad:</label><br>
+                <input type="text" id="city" name="city" required maxlength="50" autocomplete="address-level2"
+                    list="city-options" placeholder="Selecciona o escribe una ciudad">
+                <datalist id="city-options">
+                    <option value="Madrid"></option>
+                    <option value="Barcelona"></option>
+                    <option value="Valencia"></option>
+                    <option value="Sevilla"></option>
+                </datalist>
+            </p>
+
+            <p>
+                <label for="postal-code">Codigo postal:</label><br>
+                <input type="text" id="postal-code" name="postal_code" required inputmode="numeric"
+                    pattern="[0-9]{5}" maxlength="5" placeholder="Ej. 28001">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informacion academica</legend>
+
+            <p>
+                <label for="education-level">Nivel de estudios:</label><br>
+                <select id="education-level" name="education_level" required>
+                    <option value="">Selecciona una opcion</option>
+                    <option value="secondary">Secundaria</option>
+                    <option value="technical">Tecnico</option>
+                    <option value="university">Universitario</option>
+                    <option value="postgraduate">Posgrado</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="experience">Experiencia previa en HTML (0 a 10):</label><br>
+                <input type="range" id="experience" name="experience" min="0" max="10" value="3" step="1">
+                <output for="experience">3</output>
+            </p>
+
+            <p>
+                <label for="availability">Disponibilidad semanal en horas:</label><br>
+                <input type="number" id="availability" name="availability" required min="2" max="40" step="1"
+                    value="6">
+            </p>
+
+            <p>
+                <label for="preferred-shift">Turno preferido:</label><br>
+                <select id="preferred-shift" name="preferred_shift" required>
+                    <option value="">Selecciona un turno</option>
+                    <option value="morning">Manana</option>
+                    <option value="afternoon">Tarde</option>
+                    <option value="evening">Noche</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="start-month">Mes previsto de inicio:</label><br>
+                <input type="month" id="start-month" name="start_month" required>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Documentacion y necesidades</legend>
+
+            <p>
+                <label for="cv">Adjuntar curriculum:</label><br>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+            </p>
+
+            <p>
+                <label for="portfolio">Portafolio o sitio web:</label><br>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://tusitio.com">
+            </p>
+
+            <p>
+                <label for="motivation">Motivacion para inscribirte:</label><br>
+                <textarea id="motivation" name="motivation" rows="6" cols="50" required minlength="30"
+                    maxlength="500" placeholder="Describe tus objetivos y que esperas aprender"></textarea>
+            </p>
+
+            <p>
+                <span>Recursos disponibles:</span><br>
+                <label><input type="checkbox" name="resources" value="laptop"> Portatil propio</label><br>
+                <label><input type="checkbox" name="resources" value="internet"> Conexion a internet en casa</label><br>
+                <label><input type="checkbox" name="resources" value="software"> Software de edicion instalado</label>
+            </p>
+
+            <p>
+                <label for="english-level">Nivel de ingles tecnico:</label><br>
+                <meter id="english-level" min="0" max="100" value="65">65%</meter>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Confirmacion y preferencias</legend>
+
+            <p>
+                <label for="interview-time">Horario preferido para entrevista:</label><br>
+                <input type="time" id="interview-time" name="interview_time" min="09:00" max="18:00">
+            </p>
+
+            <p>
+                <label for="registration-week">Semana sugerida para formalizar matricula:</label><br>
+                <input type="week" id="registration-week" name="registration_week">
+            </p>
+
+            <p>
+                <label for="satisfaction">Que tan claro te resulta el programa del curso:</label><br>
+                <input type="range" id="satisfaction" name="program_clarity" min="1" max="5" value="4">
+            </p>
+
+            <p>
+                <progress value="80" max="100">80%</progress>
+                <span>Formulario orientado a una inscripcion casi completa.</span>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="terms" value="accepted" required>
+                    Acepto el tratamiento de datos y las condiciones del curso.
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="newsletters" value="yes">
+                    Deseo recibir informacion sobre futuros cursos.
+                </label>
+            </p>
+        </fieldset>
+
+        <p>
+            <button type="submit">Enviar inscripcion</button>
+            <button type="reset">Limpiar formulario</button>
+        </p>
+    </form>
+
+</body>
+
+</html>

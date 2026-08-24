@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Registro</legend>
+        <form action="">
+            <!-- Etiqueta select -->
+            <label for="ciudad">Selecciona una ciudad:</label>
+            <select id="ciudad" name="ciudad">
+                <option value="madrid">Madrid</option>
+                <option value="bogota">Bogota</option>
+                <option value="lima">Lima</option>
+            </select>
+
+            <br><br>
+
+            <!-- Etiqueta button -->
+            <button type="button" onclick="alert('Boton presionado')">Haz clic</button>
+
+            <br><br>
+
+
+            <!-- Etiqueta datalist -->
+            <label for="navegador">Elige un navegador:</label>
+            <input list="navegadores" id="navegador" name="navegador">
+            <datalist id="navegadores">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+                <option value="Safari">
+            </datalist>
+
+            <br><br>
+
+            <!-- Etiqueta textarea -->
+            <label for="mensaje">Escribe tu mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="30">
+        Hola, este es un ejemplo.
+        </textarea>
+
+
+        </form>
+
+    </fieldset>
+</body>
+
+</html>
