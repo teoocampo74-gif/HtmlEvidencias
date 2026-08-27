@@ -1,6 +1,7 @@
 div p s {
-    color: #eb49f1f6;
+    color: hsla(298, 61%, 38%, 0.965);
 }
+
 div{
     border-style:dotted;
     border-color: blue;
@@ -12,4 +13,8 @@ div{
 
 #importante{
     background-color: tomato;
+}
+
+.resaltado p{
+    color: purple;
 }
