@@ -1,0 +1,19 @@
+#Pergamino {
+    background-image: url(pergamino.webp);
+    background-repeat: no-repeat;
+    background-size: 1500px;
+}
+
+
+@font-face {
+    font-family: "F" ;
+    src: url(spira/Spira-ProtoRoman110R.otf);
+}
+
+#texto{
+    font-family: "F";
+}
+
+#texto::first-letter{
+    font-size: px;
+    }

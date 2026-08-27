@@ -1,20 +1,31 @@
 .a { text-indent: 50px; }
-.b { text-indent: 3em; }
-.c { text-indent: 30%; }
-.d { text-indent: -50px; }
+.b { text-indent: 3em; 
+text-transform: uppercase;}
+.c { text-indent: 30%; 
+text-decoration: overline;}
+.d { text-indent: 50px;
+    letter-spacing: 20px;
+    word-spacing: 30px;
+    text-decoration: line-through;}
 
 .a {
     letter-spacing: 3px;
+    text-decoration: underline;
     }
     .b {
     letter-spacing: 10px;
+    text-transform: capitalize;
     }
     .c {
     letter-spacing: 15px;
+    line-height: 200px;
     }
 
     #ejemplo::first-letter{
         font-size: 50px;
+        vertical-align: bottom;
     }
 
-    
+    #ejemplo{
+        text-transform: capitalize;
+    }    
