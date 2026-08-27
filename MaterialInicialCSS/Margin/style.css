@@ -1,0 +1,11 @@
+div.a {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    margin-right: 50px;
+    margin-left: 40px;
+    background-color: azure;
+  }
+  div.b { /*Propiedad corta*/
+    margin: 30px 80px 50px 40px;
+    background-color: darkseagreen;
+  }

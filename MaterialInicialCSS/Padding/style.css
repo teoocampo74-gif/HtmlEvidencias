@@ -1,0 +1,18 @@
+div.a {
+    padding-top: 10px;
+    padding-bottom: 80px;
+    padding-right: 50px;
+    padding-left: 90px;
+    background-color:pink;
+  }
+  div.b { /*Propiedad corta*/
+    padding: 30px 50px 80px 40px;
+    background-color: darkseagreen;
+  }
+
+
+  div{
+    border-color: blue;
+    border-style: ridge;
+    border-radius: 2em;
+  }

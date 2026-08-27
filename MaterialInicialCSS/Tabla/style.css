@@ -1,0 +1,8 @@
+.a {
+    border-color: blue;
+    border-style: solid; 
+    border-collapse: separate; 
+    
+}
+.b { border-collapse: collapse; }
+

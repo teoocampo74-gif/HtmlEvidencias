@@ -6,7 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscripcion a Curso Presencial</title>
 </head>
+<style>
+    *{
+        background-color: powderblue;
+    }
 
+    legend{
+        background-color: cornsilk;
+    }
+
+    .importante{
+        color: red;
+    }
+
+    #apellido{
+        color: azure;
+    }
+</style>
 <body>
     <h1>Formulario de inscripcion a curso presencial</h1>
     <p>Completa la siguiente informacion para reservar tu plaza en el curso de Diseno Web Inicial.</p>
@@ -18,19 +34,19 @@
             <legend>Datos personales</legend>
 
             <p>
-                <label for="first-name">Nombre:</label><br>
+                <label for="first-name" class="importante">Nombre:</label><br>
                 <input type="text" id="first-name" name="first_name" required minlength="2" maxlength="40"
                     autocomplete="given-name" placeholder="Ej. Laura">
             </p>
 
             <p>
-                <label for="last-name">Apellidos:</label><br>
+                <label for="last-name" id="apellido">Apellidos:</label><br>
                 <input type="text" id="last-name" name="last_name" required minlength="2" maxlength="60"
                     autocomplete="family-name" placeholder="Ej. Gomez Ruiz">
             </p>
 
             <p>
-                <label for="dni">Documento de identidad:</label><br>
+                <label for="dni" class="importante">Documento de identidad:</label><br>
                 <input type="text" id="dni" name="dni" required minlength="8" maxlength="15"
                     pattern="[A-Za-z0-9-]{8,15}" placeholder="Ej. 12345678A">
             </p>
@@ -52,13 +68,13 @@
             <legend>Contacto</legend>
 
             <p>
-                <label for="email">Correo electronico:</label><br>
+                <label for="email" class="importante">Correo electronico:</label><br>
                 <input type="email" id="email" name="email" required autocomplete="email"
                     placeholder="correo@ejemplo.com">
             </p>
 
             <p>
-                <label for="phone">Telefono movil:</label><br>
+                <label for="phone" class="importante">Telefono movil:</label><br>
                 <input type="tel" id="phone" name="phone" required autocomplete="tel"
                     pattern="[0-9+ ]{9,15}" placeholder="Ej. +34 600 123 456">
             </p>
@@ -92,7 +108,7 @@
             <legend>Informacion academica</legend>
 
             <p>
-                <label for="education-level">Nivel de estudios:</label><br>
+                <label for="education-level" class="importante">Nivel de estudios:</label><br>
                 <select id="education-level" name="education_level" required>
                     <option value="">Selecciona una opcion</option>
                     <option value="secondary">Secundaria</option>
@@ -109,7 +125,7 @@
             </p>
 
             <p>
-                <label for="availability">Disponibilidad semanal en horas:</label><br>
+                <label for="availability" class="importante" >Disponibilidad semanal en horas:</label><br>
                 <input type="number" id="availability" name="availability" required min="2" max="40" step="1"
                     value="6">
             </p>
@@ -134,7 +150,7 @@
             <legend>Documentacion y necesidades</legend>
 
             <p>
-                <label for="cv">Adjuntar curriculum:</label><br>
+                <label for="cv" class="importante">Adjuntar curriculum:</label><br>
                 <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
             </p>
 
@@ -150,7 +166,7 @@
             </p>
 
             <p>
-                <span>Recursos disponibles:</span><br>
+                <span class="importante">Recursos disponibles:</span><br>
                 <label><input type="checkbox" name="resources" value="laptop"> Portatil propio</label><br>
                 <label><input type="checkbox" name="resources" value="internet"> Conexion a internet en casa</label><br>
                 <label><input type="checkbox" name="resources" value="software"> Software de edicion instalado</label>
@@ -186,14 +202,14 @@
             </p>
 
             <p>
-                <label>
+                <label class="importante">
                     <input type="checkbox" name="terms" value="accepted" required>
                     Acepto el tratamiento de datos y las condiciones del curso.
                 </label>
             </p>
 
             <p>
-                <label>
+                <label  >
                     <input type="checkbox" name="newsletters" value="yes">
                     Deseo recibir informacion sobre futuros cursos.
                 </label>

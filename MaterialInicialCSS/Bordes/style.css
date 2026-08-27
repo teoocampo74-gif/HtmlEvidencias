@@ -1,0 +1,9 @@
+.a { border: 4px solid blue; }
+.b { border: 6px dotted green; }
+.c { border: 3px dashed purple; }
+.d { 
+     border-top: 3px double orange;
+     border-right: 3px double brown;
+     border-bottom: 3px double brown;
+     border-left: 3px double brown;
+ }

@@ -1,0 +1,15 @@
+div p s {
+    color: #eb49f1f6;
+}
+div{
+    border-style:dotted;
+    border-color: blue;
+    
+} 
+.resaltado{
+    background-color: blueviolet;
+}
+
+#importante{
+    background-color: tomato;
+}

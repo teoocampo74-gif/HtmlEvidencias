@@ -1,0 +1,20 @@
+.a { text-indent: 50px; }
+.b { text-indent: 3em; }
+.c { text-indent: 30%; }
+.d { text-indent: -50px; }
+
+.a {
+    letter-spacing: 3px;
+    }
+    .b {
+    letter-spacing: 10px;
+    }
+    .c {
+    letter-spacing: 15px;
+    }
+
+    #ejemplo::first-letter{
+        font-size: 50px;
+    }
+
+    
