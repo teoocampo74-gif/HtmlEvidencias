@@ -1,4 +1,16 @@
 .a {list-style-type: circle;}
-.b {list-style-type: square;}
-.c {list-style-type: upper-roman;}
+.b {list-style-type: square;}  /* son estilos aplicables a los marcadores de las listas */
+.c {list-style-type: upper-roman;} 
 .d {list-style-type: lower-alpha;}
+
+
+ul.a { list-style-image: url('https://i.racjonalista.pl/img/em/lol.gif'); } 
+ul.b { list-style-image: url('https://media.giphy.com/media/tBik70kZOJKOk/giphy.gif'); }
+
+ul.a { list-style-position: outside; } /* es para indicar la posicion de los marcadores de las listas */
+ul.b { list-style-position: inside; }
+
+ul.e { list-style: square inside; } /* permite establecer un estilo a la lista */
+ul.f { list-style: circle inside; }
+
+
