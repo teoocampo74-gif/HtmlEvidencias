@@ -6,7 +6,7 @@ text-decoration: overline;}
 .d { text-indent: 50px;
     letter-spacing: 20px;
     word-spacing: 30px;
-    text-decoration: line-through;}
+    text-decoration: line-through;} 
 
 .a {
     letter-spacing: 3px;
@@ -14,7 +14,7 @@ text-decoration: overline;}
     }
     .b {
     letter-spacing: 10px;
-    text-transform: capitalize;
+    text-transform: inherit;
     }
     .c {
     letter-spacing: 15px;

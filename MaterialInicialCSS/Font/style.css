@@ -1,2 +1,25 @@
 .a  { font-family: "Times New Roman", Times, serif; }
-.b  { font-family: Arial, Helvetica, sans-serif; }
+.b  { font-family: Arial, Helvetica, sans-serif; } 
+
+
+.a  { font-style: normal; } 
+.b  { font-style: italic; } /* se utilizan principalmente para cambiar el estilo de la fuente */
+.negrita  { font-style: oblique; } 
+
+.a  { font-variant: normal; }
+.b  { font-variant: small-caps; } /* Convierte las mayusculas manteniendo un tamaño inferior */
+
+
+/* se utiliza para la anchura de los caracteres */
+.a  { font-weight: normal; } 
+.b  { font-weight: bold; }  /* Es un valor absoluto que establece el texto en negrita estándar, equivalente al valor numérico 700. */
+.negrita { font-weight: 400; }
+ /* ligther hace el texto un paso más delgado que el peso del elemento padre */
+
+
+
+.a  { font-size: 20px; }
+.b  { font-size: 2em; }
+.c  { font-size: xx-small; }
+.d  { font-size: small; }
+.e  { font-size: 250%; }
