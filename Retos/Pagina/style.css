@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 40px;
+    background-color: gray;
+    border: white;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+nav ul li{
+    padding: 0 30px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+}
+
+.catalogo div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.catalogo div article{
+    height: 200px;
+    width: 150px;
+    background-color: rgb(57, 57, 160);
+}
