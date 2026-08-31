@@ -20,6 +20,6 @@
 
 .a  { font-size: 20px; }
 .b  { font-size: 2em; }
-.c  { font-size: xx-small; }
+.negrita  { font-size: xx-small; } /* font-size es para cambiar el tamaño de la fuente */
 .d  { font-size: small; }
 .e  { font-size: 250%; }
