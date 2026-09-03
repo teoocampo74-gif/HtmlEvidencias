@@ -1,44 +1,122 @@
-body{
-    display: flex;
-    flex-direction: column;
+@font-face {
+  font-family: "mi fuente";
+  src: url(Stone\ Crusher\ PERSONAL\ USE\ ONLY!.ttf);
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Barra superior (Header) */
 header {
-    height: 40px;
-    background-color: gray;
-    border: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  font-family: "mi fuente";
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #666;
 }
 
-header nav ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
+nav a:hover{
+  color: black;
 }
 
-nav ul li{
-    padding: 0 30px;
+/* 2. Sección principal (Hero) */
+.hero {
+  background: #e2e2e2; 
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-image: url(img/barberia.webp);
+  background-size: 100%;
+  font-family: "mi fuente";
+}
+.hero img{
+  object-fit: cover;
+  
 }
 
-section{
-    display: flex;
-    flex-direction: column;
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.catalogo div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+
+
+/* 3. Sección de servicios (Tarjetas) */
+#services{
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.catalogo div article{
-    height: 200px;
-    width: 150px;
-    background-color: rgb(57, 57, 160);
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 3%;
+  background: #fff;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 10px 2px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 12px 6px 18px 2px rgba(0, 0, 0, 0.15);
+}   
+
+
+.card img {
+  width: 100%;
+  height: 140px;
+  border: 100%;
+  object-fit: cover;
+}
+
+/* 4. Botones */
+button {
+  background-color: #3866d8;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: blue;
+}
+
+footer{
+  background-color: gray;
 }
