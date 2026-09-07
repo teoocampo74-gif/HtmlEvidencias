@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+
+header {
+    background-color: #000000;
+    color: #ff0000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 10px ;
+}
+
+@font-face {
+    font-family: "Mi fuentecita";
+    src: url(hmfonts/HM.ttf);
+}
+
+
+.logo {
+    padding: 15px 30px;
+    font-family: "Mi fuentecita";
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    
+}
+
+.iconos span {
+    margin-left: 20px;
+    cursor: pointer;
+}
+ 
+.seccion-principal {
+    height: 80vh;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    background-image: url(img/modelo1.jpg);
+    margin-top: 60px;
+}
+
+
+
+.texto-rojo {
+  position: absolute;         
+  top: 50%;                   
+  left: 8%;                  
+  transform: translateY(-50%); 
+  color: #ff0000;
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.1;
+  z-index: 2;
+}
+
+.promocion{
+    color: white ;
+    font-size: 20px;
+}
