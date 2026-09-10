@@ -23,6 +23,24 @@ header {
     height: 62px;
 } 
 
+.panel{
+    position: absolute;
+    top: 62px; 
+    left: 0;
+    width: 320px; 
+    height: calc(100vh - 62px); 
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 25px;
+    z-index: 1000;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-100%); 
+    opacity: 0;                   
+    visibility: hidden;           
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s ease-in-out, 
+                visibility 0.3s;
+}
 
 .logo { 
     padding: 0;
@@ -79,8 +97,6 @@ nav a:hover {
     padding: 30px 25px;
     z-index: 1000;
     box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.5);
-    
-   
     transform: translateX(-100%); 
     opacity: 0;                   
     visibility: hidden;           
