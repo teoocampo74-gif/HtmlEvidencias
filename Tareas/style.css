@@ -195,11 +195,9 @@ nav a:hover {
 }
 
 .principal img {
-    display: block;
+    display: flex;
+    background-size: cover;
     width: 100%;
-    height: auto;
-    max-height: 720px;
-    object-fit: cover;
 }
 
 
@@ -256,23 +254,16 @@ nav a:hover {
 
 .titulo-seccion {
     width: 100%;
-
     background-color: black;
     color: white;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 25px;
-
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-.titulo-seccion span:last-child {
-    font-size: 25px;
-}
 
 
 /*PRODUCTOS*/
@@ -297,23 +288,19 @@ nav a:hover {
 .categorias {
     width: 70%;
     margin: 70px auto 0;
-
     display: flex;
-    gap: 0;
 }
 
 .categorias > div {
     width: 50%;
     overflow: hidden;
+    padding: 10px;
 }
 
 .categorias img {
     display: block;
-
     width: 100%;
     height: auto;
-
-    object-fit: contain;
 }
 
 /* FOOTER */
@@ -326,7 +313,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 70px;
-    row-gap: 0;
     font-family:  Arial, sans-serif;
 }
 
