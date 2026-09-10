@@ -4,38 +4,344 @@
     <meta charset="UTF-8">
     <title>H&M</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
- <header>
+
+    <header class="sticky-top">
         <div class="logo">H&M</div>
         <nav>
+            <a href="#" data-menu="menu-women">WOMEN</a>
+            <a href="#" data-menu="menu-men">MAN</a>
+            <a href="#" data-menu="menu-kids">KIDS</a>
+            <a href="#" data-menu="menu-home">HOME</a>
+            <a href="#" data-menu="menu-beauty">BEAUTY</a>
+        </nav>
+        
+        <!-- Iconos de la derecha -->
+        <div class="iconos">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-regular fa-user"></i></a>
+            <a href="https://www2.hm.com/en_us/favourites"><i class="fa-regular fa-heart"></i></a>
+            <a href="https://www2.hm.com/en_us/cart"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </header>
+
+    <!-- MENÚS LATERALES -->
+
+    <!-- MENÚ WOMEN -->
+    <div id="menu-women" class="menu-lateral">
+        <div class="menu-links">
+            <a href="#">NEW IN</a>
+            <a href="#">THE COLLEGE SHOP</a>
+            <a href="#">BACK TO WORK</a>
+            <a href="#">STUDIO ESSENTIALS</a>
+            <hr class="divider">
+            <a href="#">CLOTHING</a>
+            <a href="#">ACTIVEWEAR</a>
+            <a href="#">SWEATERS & CARDIGANS</a>
+            <a href="#">COATS & JACKETS</a>
+            <a href="#">ACCESSORIES</a>
+            <a href="#">SHOES</a>
+            <a href="#">MATERNITY CLOTHES</a>
+            <a href="#">HOME</a>
+            <a href="#">BEAUTY</a>
+            <a href="#">OFFERS & DEALS</a>
+            <hr class="divider">
+            <a href="#" class="rojo">SALE</a>
+            <a href="#" class="rojo">GIFT CARDS</a>
+            <hr class="divider">
+            <a href="#">SUSTAINABILITY</a>
+            <a href="#">SECOND HAND</a>
+        </div>
+    </div>
+
+    <!-- MENÚ MAN -->
+    <div id="menu-men" class="menu-lateral">
+        <div class="menu-links">
+            <a href="#">NEW IN</a>
+            <a href="#">CASUAL CLASSICS</a>
+            <a href="#">THE FALL SHOP</a>
+            <a href="#">OFFICEWEAR EDIT</a>
+            <hr class="divider">
+            <a href="#">CLOTHING</a>
+            <a href="#">ACTIVEWEAR</a>
+            <a href="#">ACCESSORIES</a>
+            <a href="#">SHOES</a>
+            <a href="#">OFFERS & DEALS</a>
+            <hr class="divider">
+            <a href="#" class="rojo">SALE</a>
+            <a href="#" class="rojo">GIFT CARDS</a>
+            <hr class="divider">
+            <a href="#">SUSTAINABILITY</a>
+            <a href="#">SECOND HAND</a>
+            <a href="#">CUSTOMER SERVICE</a>
+            <a href="#">STUDENTS GET 10% OFF</a>
+            <a href="#">FIND A STORE</a>
+            <a href="#">NEWSLETTER</a>
+            <a href="#">DOWNLOAD IOS</a>
+        </div>
+    </div>
+
+    <!-- MENÚ KIDS -->
+    <div id="menu-kids" class="menu-lateral">
+        <div class="menu-links">
+            <span class="subtitulo-menu">Girl</span>
+            <a href="#">2-8 YEARS</a>
+            <a href="#">9-14 YEARS</a>
+            <br>
+            <span class="subtitulo-menu">Boy</span>
+            <a href="#">2-8 YEARS</a>
+            <a href="#">9-14 YEARS</a>
+            <br>
+            <span class="subtitulo-menu">Baby</span>
+            <a href="#">NEWBORN</a>
+            <a href="#">GIRL</a>
+            <a href="#">BOY</a>
+            <hr class="divider">
+            <a href="#">ALL KIDS</a>
+            <hr class="divider">
+            <a href="#">SUSTAINABILITY</a>
+            <a href="#">SECOND HAND</a>
+            <a href="#">CUSTOMER SERVICE</a>
+            <a href="#">STUDENTS GET 10% OFF</a>
+            <a href="#">FIND A STORE</a>
+        </div>
+    </div>
+
+    <!-- MENÚ HOME -->
+    <div id="menu-home" class="menu-lateral">
+        <div class="menu-links">
+            <a href="#">NEW IN</a>
+            <a href="#">THE STRIPE SHOP</a>
+            <a href="#">HOME OFFICE ESSENTIALS</a>
+            <a href="#">HALLOWEEN EDIT</a>
+            <hr class="divider">
+            <a href="#">VIEW ALL PRODUCTS</a>
+            <a href="#">BEST SELLERS</a>
+            <a href="#">COOKING & DINING</a>
+            <a href="#">BEDDING & BLANKETS</a>
+            <a href="#">DECORATIONS</a>
+            <a href="#">BATH & SHOWER</a>
+            <a href="#">INTERIOR TEXTILES</a>
+            <a href="#">HOME FRAGRANCE</a>
+            <a href="#">KIDS & BABY</a>
+            <a href="#">STORAGE</a>
+            <a href="#">FURNITURE</a>
+            <a href="#">LIGHTING</a>
+            <a href="#">SLEEP & LOUNGEWEAR</a>
+            <a href="#">SHOP BY ROOM</a>
+            <a href="#">COLLECTIONS</a>
+            <a href="#">OFFERS & DEALS</a>
+            <hr class="divider">
+            <a href="#" class="rojo">SALE</a>
+            <a href="#" class="rojo">GIFT CARDS</a>
+        </div>
+    </div>
+
+    <!-- MENÚ BEAUTY -->
+    <div id="menu-beauty" class="menu-lateral">
+        <div class="menu-links">
+            <a href="#">NEW IN</a>
+            <a href="#">EVERYDAY RITUALS</a>
+            <a href="#">BACK TO WORK</a>
+            <a href="#">FRESH SCENTS</a>
+            <hr class="divider">
+            <a href="#">VIEW ALL PRODUCTS</a>
+            <a href="#">BEST SELLERS</a>
+            <a href="#">FRAGRANCE & PERFUME</a>
+            <a href="#">MAKEUP</a>
+            <a href="#">NAILS</a>
+            <a href="#">SKIN CARE</a>
+            <a href="#">HAIR CARE</a>
+            <a href="#">MAKEUP BAGS & CASES</a>
+            <a href="#">MINI SIZE</a>
+            <a href="#">BEAUTY SETS</a>
+            <a href="#">BRUSHES & TOOLS</a>
+            <a href="#">DEALS & OFFERS</a>
+            <hr class="divider">
+            <a href="#" class="rojo">SALE</a>
+            <a href="#" class="rojo">GIFT CARDS</a>
+            <hr class="divider">
+            <a href="#">GUIDES</a>
+            <a href="#">ALL BRANDS</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO / SECCIÓN PRINCIPAL -->
+        <section class="seccion-principal">
+            <div class="texto-rojo">
+                UP TO 50%<br>OFF SITEWIDE
+            </div>
+        </section>
+
+        <!-- PROMOCIÓN -->
+        <section class="promocion">
+            <div>
+                <strong>LONG WEEKEND, BIG DEALS</strong>
+                <p>THE LABOR DAY EVENT</p>
+                <a href="#">View T&Cs</a>
+            </div>
+        </section>
+
+        <!-- BANNER EDITORIAL 1 -->
+        <section class="principal">
+            <img src="img/modelo2.jpg" alt="The Art of Simplicity">
+            <div class="barra-negra">
+                <span>THE ART OF SIMPLICITY</span>
+                <span>→</span>
+            </div>
+        </section>
+
+        <!-- DOS COLUMNAS EDITORIALES -->
+        <section class="dos-columnas">
+            <div class="categoria">
+                <img src="img/modelo3.jpg" alt="Everyday essentials">
+                <div class="barra-negra">
+                    <span>EVERYDAY ESSENTIALS</span>
+                    <span>→</span>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <img src="img/modelo4.jpg" alt="Preppy redefined">
+                <div class="barra-negra">
+                    <span>PREPPY, REDEFINED</span>
+                    <span>→</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW IN (GRILLA DE PRODUCTOS) -->
+        <section class="new-in">
+            <div class="titulo-seccion">
+                <span>NEW IN</span>
+                <span>→</span>
+            </div>
+
+            <div class="productos">
+                <img src="img/prenda11.jpg" alt="Producto 1">
+                <img src="img/prenda2.jpg" alt="Producto 2">
+                <img src="img/prenda5.jpg" alt="Producto 3">
+                <img src="img/prenda3.jpg" alt="Producto 4">
+                <img src="https://image.hm.com/assets/hm/4c/2b/4c2bca6b0722a5a26fba28951f323167b74d8f7c.jpg?imwidth=384" alt="Producto 5">
+                <img src="img/prenda6.jpg" alt="Producto 6">
+                <img src="img/prenda1.jpg" alt="Producto 7">
+                <img src="img/prenda8.jpg" alt="Producto 8">
+                <img src="img/prenda12.jpg" alt="Producto 9">
+                <img src="img/prenda7.jpg" alt="Producto 10">
+                <img src="img/prenda4.jpg" alt="Producto 11">
+                <img src="https://image.hm.com/assets/hm/2e/ee/2eeeeb1b128c295576af5300c18987503153129f.jpg?imwidth=384" alt="Producto 12">
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS BLOQUE 1 -->
+        <section class="categorias">
+            <div>
+                <img src="img/modelo6.jpg" alt="Dresses">
+                <div class="texto-categoria">DRESSES</div>
+            </div>
+            <div>
+                <img src="img/modelo5.jpg" alt="Tops">
+                <div class="texto-categoria">TOPS</div>
+            </div>
+        </section>
+
+        <!-- CATEGORÍAS BLOQUE 2 -->
+        <section class="categorias">
+            <div>
+                <img src="img/modelo7.jpg" alt="Category 3">
+                <div class="texto-categoria">CATEGORY</div>
+            </div>
+            <div>
+                <img src="img/modelo8.jpg" alt="Category 4">
+                <div class="texto-categoria">CATEGORY</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-columna">
+            <h3>SHOP</h3>
             <a href="#">WOMEN</a>
             <a href="#">MAN</a>
             <a href="#">KIDS</a>
             <a href="#">HOME</a>
             <a href="#">BEAUTY</a>
-        </nav>
-    </header>
-
-    <main>
-    <section class="seccion-principal">
-        <div class="texto-rojo">
-            UP TO 50%<br>OFF SITEWIDE
+            <a href="#">STUDENT DISCOUNT</a>
+            <a href="#">GIFT CARDS</a>
         </div>
-    </section>
 
-        <section class="promocion">
-
-        <div>
-            <strong>LONG WEEKEND, BIG DEALS</strong>
-            <p>THE LABOR DAY EVENT</p>
-            <a href="#">View T&Cs</a>
+        <div class="footer-columna">
+            <h3>CORPORATE INFO</h3>
+            <a href="#">CAREER AT H&M</a>
+            <a href="#">ABOUT H&M GROUP</a>
+            <a href="#">SUSTAINABILITY</a>
+            <a href="#">PRESS</a>
+            <a href="#">INVESTOR RELATIONS</a>
+            <a href="#">CORPORATE GOVERNANCE</a>
         </div>
-    </section>
 
-    </main>
-    <footer>
+        <div class="footer-columna">
+            <h3>HELP</h3>
+            <a href="#">CUSTOMER SERVICE</a>
+            <a href="#">MY ACCOUNT</a>
+            <a href="#">FIND A STORE</a>
+            <a href="#">LEGAL & PRIVACY</a>
+            <a href="#">CONTACT</a>
+            <a href="#">COOKIE NOTICE</a>
+        </div>
 
+        <div class="footer-columna">
+            <h3>BECOME A MEMBER</h3>
+            <p>Become a member today and get exclusive benefits!</p>
+            <a href="#">READ MORE</a>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="logo-footer">H&M</div>
+            <p>
+                United States ($)
+                <u>CHANGE REGION</u>
+            </p>
+            <p class="copyright">
+                The content of this site is copyright-protected and is the property of H&M Hennes & Mauritz AB. H&M is committed to accessibility. That commitment means H&M embraces WCAG guidelines and supports assistive technologies such as screen readers. If you are using a screen reader, magnifier, or other assistive technologies and are experiencing difficulties using this website, please call our TOLL-FREE support line (855-466-7467) for assistance.
+            </p>
+        </div>
     </footer>
+
+ 
+    <script>
+        const navLinks = document.querySelectorAll('header nav a[data-menu]');
+        const menus = document.querySelectorAll('.menu-lateral');
+
+        function ocultarTodosLosMenus() {
+            menus.forEach(menu => menu.classList.remove('activo'));
+        }
+
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute('data-menu');
+            const targetMenu = document.getElementById(targetId);
+
+            link.addEventListener('mouseenter', () => {
+                ocultarTodosLosMenus();
+                if (targetMenu) {
+                    targetMenu.classList.add('activo');
+                }
+            });
+        });
+
+        // Cierra el menú cuando el cursor sale tanto de la nav como de los menús laterales
+        document.addEventListener('mouseover', (e) => {
+            const isOverNav = e.target.closest('header nav');
+            const isOverMenu = e.target.closest('.menu-lateral');
+
+            if (!isOverNav && !isOverMenu) {
+                ocultarTodosLosMenus();
+            }
+        });
+    </script>
 </body>
 </html>
