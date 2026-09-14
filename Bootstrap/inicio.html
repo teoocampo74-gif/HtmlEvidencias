@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberPro - Inicio</title>
+    <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .navbar-custom {
+            background-color: black;
+        }
+
+        .hero-section {
+            background-color: #92959a;
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+        }
+
+        .btn{
+            color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    <i class="fa-solid fa-scissors text-primary me-2"></i>
+                    BarberPro
+                </a>
+                <div
+                    class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav">
+                    <ul class="navbar-nav gap-2 me-3">
+                       <li class="nav-item">
+                            <a class="nav-link active px-3 rounded-pill bg-primary text-white" href="#">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="#servicios">
+                                Servicios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="barberos.html">
+                                Barberos
+                            </a>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+    <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="empleados.html">Administrador</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="empleados.html">Empleados</a>
+      <a class="dropdown-item" href="#">Smartphone</a>
+    </div>
+                        </li>
+                        <li><a class="btn" data-bs-toggle="modal" data-bs-target="#myModal">login</a></li>
+                    </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+    >
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="myModalLabel">
+                        Iniciar sesión
+                    </h4>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <form action="/action_page.php">
+
+                        <div class="mb-3 mt-3">
+
+                            <label
+                                for="email"
+                                class="form-label"
+                            >
+                                Email:
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Ingresa tu email"
+                                name="email"
+                            >
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label
+                                for="pwd"
+                                class="form-label"
+                            >
+                                Contraseña:
+                            </label>
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                id="pwd"
+                                placeholder="Ingresa tu contraseña"
+                                name="pswd"
+                            >
+
+                        </div>
+
+                        <div class="form-check mb-3">
+
+                            <label class="form-check-label">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="remember"
+                                >
+
+                                Recordarme
+
+                            </label>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100"
+                        > Iniciar sesión
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        data-bs-dismiss="modal"
+                    >
+                        Cerrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="container my-5">
+
+        <div class="row mb-4">
+
+            <div class="col-12">
+
+                <h1 class="fw-bold text-dark">
+                    Bienvenido a BarberPro
+                </h1>
+
+                <p class="text-muted">
+                    Encuentra a los mejores profesionales para tu estilo.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="row mb-5">
+
+            <div class="col-12">
+                <div class="hero-section">
+                    <h2 class="fw-bold mb-3">
+                        Estilo y precisión en cada corte
+                    </h2>
+                    <p class="lead mb-0 col-lg-8">
+                        Encuentra los mejores barberos y disfruta de un
+                        servicio profesional adaptado a tu estilo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+
+</html>
