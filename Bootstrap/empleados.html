@@ -5,22 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barberos</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/3.0.4/css/dataTables.bootstrap5.min.css">
+
     <style>
-		body {
+        body {
             background-color: #f8f9fa;
             color: #333;
         }
-
         .navbar-custom {
             background-color: black;
-        }
-
-        .hero-section {
-            background-color: #92959a;
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 15px;
         }
         .navbar-nav .btn {
             color: #f8f9fa;
@@ -29,90 +23,31 @@
     </style>
 </head>
 <body>
- <header>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
             <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand fw-bold fs-4" href="#">
-                    BarberPro
-                </a>
-
-                <!-- Botón hamburguesa para móviles -->
+                <a class="navbar-brand fw-bold fs-4" href="#">BarberPro</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <!-- Elementos de la barra -->
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                    
-                    <!-- Enlaces principales a la izquierda/centro -->
                     <ul class="navbar-nav gap-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active px-3 rounded-pill bg-primary text-white" href="#">
-                                Inicio
-                            </a>
+                            <a class="nav-link active px-3 rounded-pill bg-primary text-white" href="index.html">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="btn" href="#servicios">
-                                Servicios
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn" href="barberos.html">
-                                Barberos
-                            </a>
-                        </li>
-
-                        <!-- Dropdown 1: Administrador -->
-                        <li class="nav-item dropdown">
-                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                                Administrador
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
-                                <li><a class="dropdown-item" href="#">Smartphone</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Dropdown 2: Gestión (Nuevo desplegable estilo grown down) -->
-                        <li class="nav-item dropdown">
-                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                                Gestión
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Citas</a></li>
-                                <li><a class="dropdown-item" href="#">Catálogo Servicios</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Inventario</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="btn" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="btn" href="barberos.html">Barberos</a></li>
                     </ul>
-
-                    <!-- Barra de búsqueda y Login a la derecha -->
-                    <div class="d-flex align-items-center gap-3">
-                        <!-- Barra de búsqueda -->
-                        <form class="d-flex" role="search">
-                            <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
-                            <button class="btn btn-outline-light btn-sm" type="submit">Buscar</button>
-                        </form>
-
-                        <!-- Botón Login -->
-                        <a class="btn btn-outline-primary btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#myModal" href="#">
-                            Iniciar sesión
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </nav>
     </header>
 
-
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container my-5">
         <div class="table-responsive">
-            <table class="table table-striped table-hover align-middle">
-                <thead class="table-dark">
+            <table  id="Tablita"   class="table table-striped table-hover align-middle">
+                <thead class="table-dark	">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nombre</th>
@@ -129,14 +64,14 @@
                         <td>maria@example.com</td>
                         <td><span class="badge bg-success">Admin</span></td>
                         <td class="text-center">
-                            <button class="btn btn-sm btn-info text-white" title="Ver detalles" data-bs-toggle="modal" data-bs-target="#myModal">
-                                <i class="bi bi-eye"></i> Ver detalle
+                            <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#detalles">
+                                Ver detalle
                             </button>
-                            <button class="btn btn-sm btn-warning text-dark" title="Editar">
-                                Editar <i class="bi bi-pencil-square"></i>
+                            <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#editar">
+                                Editar
                             </button>
-                            <button class="btn btn-sm btn-danger" title="Eliminar">
-                                Eliminar <i class="bi bi-trash"></i>
+                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                Eliminar
                             </button>
                         </td>
                     </tr>
@@ -147,14 +82,14 @@
                         <td>carlos@example.com</td>
                         <td><span class="badge bg-warning text-dark">Editor</span></td>
                         <td class="text-center">
-                            <button class="btn btn-sm btn-info text-white" title="Ver detalles" data-bs-toggle="modal" data-bs-target="#myModal">
-                                Ver detalles <i class="bi bi-eye"></i>
+                            <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#detalles">
+                                Ver detalle
                             </button>
-                            <button class="btn btn-sm btn-warning text-dark" title="Editar">
-                                Editar <i class="bi bi-pencil-square"></i>
+                            <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#editar">
+                                Editar
                             </button>
-                            <button class="btn btn-sm btn-danger" title="Eliminar">
-                                Eliminar <i class="bi bi-trash"></i>
+                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                Eliminar
                             </button>
                         </td>
                     </tr>
@@ -165,14 +100,14 @@
                         <td>lucia@example.com</td>
                         <td><span class="badge bg-secondary">Usuario</span></td>
                         <td class="text-center">
-                            <button class="btn btn-sm btn-info text-white" title="Ver detalles" data-bs-toggle="modal" data-bs-target="#myModal">
-                                Ver detalle <i class="bi bi-eye"></i>
+                            <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#detalles">
+                                Ver detalle
                             </button>
-                            <button class="btn btn-sm btn-warning text-dark" title="Editar">
-                                Editar <i class="bi bi-pencil-square"></i>
+                            <button class="btn btn-sm btn-warning text-dark" data-bs-toggle="modal" data-bs-target="#editar">
+                                Editar
                             </button>
-                            <button class="btn btn-sm btn-danger" title="Eliminar">
-                                Eliminar <i class="bi bi-trash"></i>
+                            <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#eliminar">
+                                Eliminar
                             </button>
                         </td>
                     </tr>
@@ -180,67 +115,122 @@
             </table>
         </div>
     </main>
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+
+    <!-- MODAL VER DETALLES (CON LOS CAMPOS DISABLED) -->
+    <div class="modal fade" id="detalles" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-
-        
                 <div class="modal-header">
                     <h4 class="modal-title" id="modalLabel">Info Empleado</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <!-- Modal body (Formulario organizado) -->
                 <div class="modal-body">
                     <form>
-                        <!-- Nombre Completo -->
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre Completo:</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                            <label class="form-label">Nombre Completo:</label>
+                            <input type="text" class="form-control" value="María Gómez" disabled>
                         </div>
-
-                        <!-- Dirección -->
-                        <div class="mb-3">	
-                            <label for="direccion" class="form-label">Dirección:</label>
-                            <input type="text" class="form-control" id="direccion" placeholder="Ingrese su direccion">
+                        <div class="mb-3">  
+                            <label class="form-label">Dirección:</label>
+                            <input type="text" class="form-control" value="Calle Falsa 123" disabled>
                         </div>
-
-                        <!-- Teléfono -->
                         <div class="mb-3">
-                            <label for="telefono" class="form-label">Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono" placeholder="Ingrese su telefono">
+                            <label class="form-label">Teléfono:</label>
+                            <input type="tel" class="form-control" value="3001234567" disabled>
                         </div>
-
-                        <!-- Área -->
                         <div class="mb-3">
-                            <label for="area" class="form-label">Area:</label>
-                            <select class="form-select" id="area">
+                            <label class="form-label">Area:</label>
+                            <select class="form-select" disabled>
+                                <option>Contabilidad</option>
+                                <option selected>Administración</option>
+                                <option>Sistemas</option>456
+                                <option>Recursos Humanos</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password:</label>
+                            <input type="password" class="form-control" value="12345" disabled>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EDITAR -->
+    <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="editarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="editarLabel">Editar Empleado</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre-edit" class="form-label">Nombre Completo:</label>
+                            <input type="text" class="form-control" id="nombre-edit" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="mb-3">  
+                            <label for="direccion-edit" class="form-label">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion-edit" placeholder="Ingrese su direccion">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono-edit" class="form-label">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono-edit" placeholder="Ingrese su telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="area-edit" class="form-label">Area:</label>
+                            <select class="form-select" id="area-edit">
                                 <option selected>Contabilidad</option>
                                 <option value="1">Administración</option>
                                 <option value="2">Sistemas</option>
                                 <option value="3">Recursos Humanos</option>
                             </select>
                         </div>
-
-                        <!-- Password -->
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password:</label>
-                            <input type="password" class="form-control" id="password" placeholder="Enter password">
+                            <label for="password-edit" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password-edit" placeholder="Enter password">
                         </div>
                     </form>
                 </div>
-
-                <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Guardar cambios</button>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MODAL ELIMINAR-->
+    <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="eliminarLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="eliminarLabel">Confirmar Eliminación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="fs-5">¿Desea eliminar este registro?</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Sí, eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdn.datatables.net/3.0.4/js/dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/3.0.4/js/dataTables.bootstrap5.min.js"></script>
+   <script>
+       new DataTable('#Tablita');
+   </script>
+
 </body>
 </html>
