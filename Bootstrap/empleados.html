@@ -26,18 +26,80 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
             <div class="container">
-                <a class="navbar-brand fw-bold fs-4" href="#">BarberPro</a>
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold fs-4" href="#">
+                    BarberPro
+                </a>
+
+                <!-- Botón hamburguesa para móviles -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Elementos de la barra -->
                 <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    
+                    <!-- Enlaces principales a la izquierda/centro -->
                     <ul class="navbar-nav gap-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active px-3 rounded-pill bg-primary text-white" href="index.html">Inicio</a>
+                            <a class="nav-link active px-3 rounded-pill bg-primary text-white" href="#">
+                                Inicio
+                            </a>
                         </li>
-                        <li class="nav-item"><a class="btn" href="#servicios">Servicios</a></li>
-                        <li class="nav-item"><a class="btn" href="barberos.html">Barberos</a></li>
+                        <li class="nav-item">
+                            <a class="btn" href="#servicios">
+                                Servicios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="barberos.html">
+                                Barberos
+                            </a>
+                        </li>
+
+                        <!-- Dropdown 1: Administrador -->
+                        <li class="nav-item dropdown">
+                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                Administrador
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="empleados.html">Empleados</a></li>
+                                <li><a class="dropdown-item" href="#">Ventas</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Dropdown 2: Gestión  -->
+                        <li class="nav-item dropdown">
+                            <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                Gestión
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Citas</a></li>
+                                <li><a class="dropdown-item" href="catalogo.html">Catálogo Servicios</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Inventario</a></li>
+                            </ul>
+                        </li>
                     </ul>
+
+                    <!-- Barra de búsqueda y Login a la derecha -->
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- Barra de búsqueda -->
+                        <form class="d-flex" role="search">
+                            <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                            <button class="btn btn-outline-light btn-sm" type="submit">Buscar</button>
+                        </form>
+
+                        <!-- Botón Login -->
+                        <a class="btn btn-outline-primary btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#myModal" href="#">
+                            Iniciar sesión
+                        </a>
+
+                         <a class="btn btn-outline-primary btn-sm text-nowrap" data-bs-toggle="modal" data-bs-target="#myModal" href="#">
+                            Registrarse
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
